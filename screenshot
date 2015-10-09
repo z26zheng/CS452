@@ -1,0 +1,20 @@
+Time: 1 min, 20 sec, 5 dsec            Idle (cumulative):99%  (recent):100% 
+
+
+
+RECENT SENSORS:    Switches:
+---------------    ---------
+     B15  
+     C09  
+     B04            sw1: C     sw2: C     sw3: C     sw4: C
+     C01            sw5: C     sw6: C     sw7: C     sw8: C
+     D01            sw9: C     sw10: C    sw11: C    sw12: C
+                    sw13: C    sw14: C    sw15: C    sw16: C
+                    sw17: C    sw18: C    sw153: C   sw154: S
+                    sw155: C   sw156: S
+Current destination: B15
+Current velocity: 0          WOAH NELLY, ALMOST LOST THE TRAIN at time: 5651
+Next expected sensor: A03    
+mm past last sensor: 47      
+Distance difference: -39    
+Actual distance to sensor B15: 376    

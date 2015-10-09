@@ -1,0 +1,4 @@
+make clean
+make
+cp *.elf /u/cs452/tftp/ARM/z26zheng/
+chmod +x /u/cs452/tftp/ARM/z26zheng/*.elf

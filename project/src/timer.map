@@ -1,0 +1,180 @@
+Archive member included because of file (symbol)
+
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                              io.o (__udivsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                              io.o (__umodsi3)
+/u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                              /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o) (__div0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x0000000000000000 0x0000000003000000
+rom              0x0000000060000000 0x0000000001000000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+data            0x0000000000000000        0x4
+                0x0000000000000000                _DataStart = .
+ *(.data)
+ .data          0x0000000000000000        0x4 timer.o
+                0x0000000000000004                _DataEnd = .
+
+bss             0x0000000000000004     0x1574
+                0x0000000000000004                _BssStart = .
+ *(.bss)
+ .bss           0x0000000000000004        0x4 timer.o
+ .bss           0x0000000000000008      0xe20 io.o
+ .bss           0x0000000000000e28      0x718 train_control.o
+ .bss           0x0000000000001540        0x4 a0.o
+ .bss           0x0000000000001544       0x34 sensor.o
+                0x0000000000001578                _BssEnd = .
+
+text            0x0000000000001578     0x4220
+ *(.text)
+ .text          0x0000000000001578      0x224 timer.o
+                0x00000000000015cc                timer_get
+                0x000000000000176c                timer_get_time
+                0x00000000000015f4                timer_ready
+                0x0000000000001578                timer_init
+                0x0000000000001670                timer_update_buf
+ .text          0x000000000000179c     0x2208 io.o
+                0x00000000000023fc                plpopbufc
+                0x00000000000030c8                bwputr
+                0x0000000000002150                com_check_cts
+                0x00000000000021d4                plputc
+                0x0000000000001c9c                com_set_fifo
+                0x0000000000003634                bwi2a
+                0x0000000000002f24                bwputc
+                0x00000000000025e8                plputw
+                0x0000000000001e78                coms_init
+                0x0000000000002330                plpeekbufc
+                0x00000000000024bc                plbufc
+                0x000000000000180c                com_buf_push_back
+                0x00000000000018d0                com_buf_peek_front
+                0x00000000000027f8                plgetc
+                0x00000000000026f0                plbufw
+                0x000000000000179c                com_buf_init
+                0x0000000000002eec                plprintf
+                0x0000000000003384                bwa2d
+                0x0000000000001bd0                buf_size
+                0x0000000000002880                plgetc_check
+                0x0000000000002264                plputbufc
+                0x0000000000001d8c                com_enable
+                0x0000000000001f88                com_set_speed
+                0x0000000000002fe8                c2x
+                0x000000000000342c                bwa2i
+                0x0000000000002bb4                pli2a
+                0x00000000000032cc                bwgetc
+                0x0000000000001e44                com1_setup_bits
+                0x00000000000019c8                plbufprintf
+                0x0000000000001944                com_buf_printf
+                0x0000000000001a78                com_buf_pop_front
+                0x0000000000002904                pla2d
+                0x00000000000020bc                plputc_check
+                0x00000000000034f0                bwui2a
+                0x000000000000256c                plputstr
+                0x0000000000003698                bwformat
+                0x00000000000022a0                plerasefrontc
+                0x0000000000001b24                com_buf_pop_back
+                0x0000000000001f38                com_bufs_init
+                0x00000000000031c4                bwputw
+                0x000000000000396c                bwprintf
+                0x0000000000002a70                plui2a
+                0x00000000000029ac                pla2i
+                0x0000000000003048                bwputx
+                0x0000000000002c18                plformat
+                0x0000000000001c00                com_buf_size
+                0x0000000000003148                bwputstr
+ .text          0x00000000000039a4      0x8a0 train_control.o
+                0x00000000000039a4                print_sw
+                0x0000000000003f04                train_parse_command
+                0x0000000000003c40                train_buf_pop_back
+                0x0000000000003bb8                train_buf_push_back
+                0x0000000000003a50                train_init
+                0x0000000000003bfc                train_buf_pop_front
+                0x0000000000003e48                train_do_command
+                0x0000000000003c84                train_speed
+                0x0000000000003cfc                train_rv
+                0x0000000000003d7c                track_sw
+                0x0000000000003e04                train_is_future
+ .text          0x0000000000004244      0x60c a0.o
+                0x0000000000004390                format_screen
+                0x0000000000004244                wait
+                0x0000000000004278                filter_input
+                0x0000000000004604                main
+ .text          0x0000000000004850      0x964 sensor.o
+                0x0000000000004c78                sensor_get_cidx
+                0x0000000000004984                push_2print_buf
+                0x0000000000004d20                sensor_is_ready
+                0x0000000000004d94                sensor_check_byte
+                0x000000000000516c                sensor_send_request
+                0x0000000000004cc4                sensor_get_didx
+                0x0000000000004fc0                sensor_get_byte
+                0x0000000000004bb0                print_print_buf
+                0x0000000000004adc                pop_2print_buf
+                0x0000000000004850                sensor_init
+ .text          0x00000000000051b4      0x110 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+                0x00000000000051b4                __udivsi3
+                0x00000000000052ac                __aeabi_uidivmod
+ .text          0x00000000000052c4       0xcc /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+                0x00000000000052c4                __umodsi3
+ .text          0x0000000000005390        0x4 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+                0x0000000000005390                __aeabi_ldiv0
+                0x0000000000005390                __div0
+                0x0000000000005390                __aeabi_idiv0
+ *(.got)
+ .got           0x0000000000005394       0x44 timer.o
+ *(.got.plt)
+ .got.plt       0x00000000000053d8        0xc timer.o
+                0x00000000000053d8                _GLOBAL_OFFSET_TABLE_
+ *(.rodata)
+ .rodata        0x00000000000053e4       0x30 timer.o
+ .rodata        0x0000000000005414       0xfc io.o
+ .rodata        0x0000000000005510       0x14 train_control.o
+ .rodata        0x0000000000005524      0x230 a0.o
+ .rodata        0x0000000000005754       0x44 sensor.o
+ *(.glue_7)
+ *(.glue_7t)
+
+.rel.dyn
+LOAD timer.o
+LOAD io.o
+LOAD train_control.o
+LOAD a0.o
+LOAD sensor.o
+LOAD /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a
+OUTPUT(a0.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x5a
+ .comment       0x0000000000000000       0x12 timer.o
+ .comment       0x0000000000000012       0x12 io.o
+ .comment       0x0000000000000024       0x12 train_control.o
+ .comment       0x0000000000000036       0x12 a0.o
+ .comment       0x0000000000000048       0x12 sensor.o
+
+.debug_line     0x0000000000000000      0x14f
+ .debug_line    0x0000000000000000       0x86 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_line    0x0000000000000086       0x6f /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_line    0x00000000000000f5       0x5a /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_info     0x0000000000000000      0x153
+ .debug_info    0x0000000000000000       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_info    0x0000000000000071       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_info    0x00000000000000e2       0x71 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_abbrev   0x0000000000000000       0x3c
+ .debug_abbrev  0x0000000000000000       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x0000000000000014       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_abbrev  0x0000000000000028       0x14 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)
+
+.debug_aranges  0x0000000000000000       0x60
+ .debug_aranges
+                0x0000000000000000       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_umodsi3.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /u/wbcowan/gnuarm-4.0.2/lib/gcc/arm-elf/4.0.2/libgcc.a(_dvmd_tls.o)

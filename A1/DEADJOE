@@ -1,0 +1,104 @@
+
+*** These modified files were found in JOE when it aborted on Tue Jan 20 21:11:32 2015
+*** JOE was aborted because the terminal closed
+
+*** File '.git/COMMIT_EDITMSG'
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   .gitignore
+#	modified:   include/context_switch.h
+#	modified:   include/kernel.h
+#	modified:   include/task_descriptor.h
+#	modified:   include/tools.h
+#	modified:   nmake
+#	modified:   src/Makefile
+#	modified:   src/context_switch.s.in
+#	modified:   src/kernel.c
+#	deleted:    src/kernel/kernel.c
+#	deleted:    src/kernel/tasks.c
+#	deleted:    src/kernel/tasks.h
+#	modified:   src/kernel_syscall.c
+#	modified:   src/scheduler.c
+#	modified:   src/task_descriptor.c
+#	modified:   src/user_task.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	cscope.out
+#	include/context_switch
+#	src/.main_func.c.swo
+#	untracked/
+added td_magic check, init_regs, loading bar.
+BUG: the system is not using the updated context_switch.h to link its .o file.
+Strange behaviour:
+1. init_regs cannot be linked in
+2. init_kernelentry is always linked in even without #include context_switch.h
+
+j
+*** File '(Unnamed)'
+q
+quit
+
+*** File '(Unnamed)'
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
+
+*** These modified files were found in JOE when it aborted on Tue Jan 20 21:11:37 2015
+*** JOE was aborted because the terminal closed
+
+*** File '.git/COMMIT_EDITMSG'
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   .gitignore
+#	modified:   include/context_switch.h
+#	modified:   include/kernel.h
+#	modified:   include/task_descriptor.h
+#	modified:   include/tools.h
+#	modified:   nmake
+#	modified:   src/Makefile
+#	modified:   src/context_switch.s.in
+#	modified:   src/kernel.c
+#	deleted:    src/kernel/kernel.c
+#	deleted:    src/kernel/tasks.c
+#	deleted:    src/kernel/tasks.h
+#	modified:   src/kernel_syscall.c
+#	modified:   src/scheduler.c
+#	modified:   src/task_descriptor.c
+#	modified:   src/user_task.c
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	cscope.out
+#	include/context_switch
+#	src/.main_func.c.swo
+#	untracked/
+added td_magic check, init_regs, loading bar.
+BUG: the system is not using the updated context_switch.h to link its .o file.
+Strange behaviour:
+1. init_regs cannot be linked in
+2. init_kernelentry is always linked in even without #include context_switch.h
+
+
+*** File '(Unnamed)'
+q
+quit
+
+*** File '(Unnamed)'
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
+.git/COMMIT_EDITMSG
